@@ -2,7 +2,7 @@
 
 # SQuAD v1.1 dataset in French
 
-You will find in this repository a SQuAD v1.1 dataset in French. Since the train file is too big you can download it from :
+You will find in this repository a SQuAD v1.1 dev dataset in French. Since the train file is too big you can download it from :
 https://drive.google.com/drive/folders/1HzvQv4W7sveWkuxbw04tTfgiDq0ZKW8U?usp=sharing
 
 
