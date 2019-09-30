@@ -41,7 +41,39 @@ and Normalized).
 
 <p align="center"><img width="70%" src="img/SQuAD_French_constitution_.png" /></p>
 
-For more detail please see the paper : https://www.linkedin.com/pulse/something-new-french-text-mining-information-chatbot-largest-kabbadj/
+# How the dataset is build?
+
+We used the F1 evaluation metric of accuracy for the model performance. F1 measures the portion of overlap tokens
+between the predicted and the right answer.
+
+To evaluate our models, we toke the official SQuAD evaluation script (https://rajpurkar.github.io/SQuAD-explorer/) (we just
+changed the stop words from English to French ones), and we ran it along with our French SQuAD development v1.1 file
+obtained, as the French training file, by translation and answer reconstitution of the official SQuAD dev v1.1 English file.
+We trained and evaluated the three neural architectures, DrQA (Chen), RMR (Hu) & QANet (Yu), with different French
+SQuAD Datasets normalization, tokenizers, and word embedding vectors.
+
+The best results are in (figure 14).
+
+<p align="center"><img width="70%" src="img/Results_F1_DrQA_RMN_QANet.png" /></p>
+
+We notice that the F1 English scores that we obtained with the neural networks architectures that we ran with the
+models stored in Github are lower than the ones reported in the SQuAD leaderboard on Sep 1, 2018. That could be
+because the reported scores are obtained with more recent models than those stored in Github.
+Of greater concern for our work, the French models score lower by more than 10 pts than the English models with
+same architecture.
+
+The mean reason could lie in the training French Dataset that is the output of Machine Translation. As we have seen
+2/3 of translated answers are in the translated context but we have to find it start position in the context. The issue is
+that the string representing the answer could be in different positions in the context. It is difficult to determine which
+one is the right one.
+
+Therefore, this kind of error make the French Dataset less reliable for de training than de English one, which is created
+by crowdworkers. So to say handmade.
+
+Furthermore, the French answer reconstitution algorithm, for the 1/3 rest of the answers, generates even more position
+and meaning errors.
+
+# For more detail please see the paper : https://www.linkedin.com/pulse/something-new-french-text-mining-information-chatbot-largest-kabbadj/
 
 # Abstract of the paper
 
