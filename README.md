@@ -1,5 +1,9 @@
 # French-SQuAD : French Machine Reading for Question Answering
 
+<p>
+<a href="https://console.tiyaro.ai/explore/etalab-ia-camembert-base-squadFR-fquad-piaf"> <img src="https://tiyaro-public-docs.s3.us-west-2.amazonaws.com/assets/try_on_tiyaro_badge.svg"></a>
+</p>
+
 # SQuAD v1.1 dataset in French
 
 You will find in this repository a SQuAD v1.1 dev dataset in French. Since the train file is too big you can download it from :
